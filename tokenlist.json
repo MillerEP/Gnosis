@@ -1,0 +1,24 @@
+{
+  "name": "GNOSIS Token List",
+  "timestamp": "2026-01-05T00:00:00+00:00",
+  "tokens": [
+    {
+      "chainId": 8453,
+      "address": "0xdB7403A2413dE468635a2F39cf0594b893ad3E0d",
+      "name": "GNOSIS",
+      "symbol": "GNOS",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/MillerEP/Gnosis/main/metadata/logo.png",
+      "tags": ["philosophy", "phi", "symbolic", "fixed-supply"]
+    },
+    {
+      "chainId": 143,
+      "address": "0xdB7403A2413dE468635a2F39cf0594b893ad3E0d",
+      "name": "GNOSIS",
+      "symbol": "GNOS",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/MillerEP/Gnosis/main/metadata/logo.png",
+      "tags": ["philosophy", "phi", "symbolic", "fixed-supply"]
+    }
+  ]
+}
