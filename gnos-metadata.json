@@ -1,0 +1,10 @@
+{
+  "name": "GNOSIS",
+  "symbol": "GNOS",
+  "description": "GNOSIS (GNOS) is a fixed-supply philosophical token inspired by the golden ratio (φ). Its total supply of 1,618,033,989 GNOS reflects harmony, proportion, and the pursuit of inner knowledge. Deployed on Base and Monad, GNOSIS bridges symbolic meaning with modern cryptographic systems.",
+  "decimals": 18,
+  "tags": ["philosophy", "symbolic", "golden-ratio", "fixed-supply", "gnostic"],
+  "links": {
+    "github": "https://github.com/MillerEP/Gnosis"
+  }
+}
