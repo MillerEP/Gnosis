@@ -1,0 +1,44 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.31;
+
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Capped.sol";
+import "@openzeppelin/contracts/security/Pausable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract GNOSIS is 
+    ERC20, 
+    ERC20Burnable, 
+    ERC20Permit, 
+    ERC20Capped, 
+    Pausable, 
+    Ownable 
+{
+    uint256 private constant FIXED_SUPPLY = 1_618_033_989 ether;
+
+    constructor()
+        ERC20("GNOSIS", "GNOS")
+        ERC20Permit("GNOSIS")
+        ERC20Capped(FIXED_SUPPLY)
+        Ownable(msg.sender) 
+    {
+        _mint(msg.sender, FIXED_SUPPLY);
+    }
+
+    function pause() external onlyOwner {
+        _pause();
+    }
+
+    function unpause() external onlyOwner {
+        _unpause();
+    }
+
+    function _update(address from, address to, uint256 value)
+        internal
+        override(ERC20, ERC20Capped)
+    {
+        require(!paused(), "Token transfers are paused");
+        super._update(from, to, value);
+    }
+}
